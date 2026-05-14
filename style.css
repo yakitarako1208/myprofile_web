@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:#e4e4e4;
+    color:#f4f4f4;
+    overflow-x:hidden;
+}
+
+.noise{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background-image:url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    opacity:.08;
+    pointer-events:none;
+    z-index:999;
+}
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid #6f9f7d;
+    z-index:100;
+}
+
+nav a{
+    color:#3c8b50;
+    text-decoration:none;
+    margin-left:20px;
+    transition:.3s;
+}
+
+nav a:hover{
+    opacity:.6;
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero h2{
+    font-size:4rem;
+    color:#3c8b50;
+    font-weight:400;
+    letter-spacing:.08em;
+}
+
+.hero p{
+    margin-top:10px;
+    opacity:.75;
+}
+
+.card{
+    width:80%;
+    margin:100px auto;
+    padding:40px;
+    border:1px solid #6f9f7d;
+    background:rgba(255,255,255,.02);
+}
+
+h3{
+    color:#b8d7bf;
+    margin-bottom:20px;
+    font-weight:400;
+}
+
+.grid{
+    display:flex;
+    gap:20px;
+}
+
+.item{
+    flex:1;
+    padding:40px;
+    border:1px solid #6f9f7d;
+    transition:.25s;
+}
+
+.item:hover{
+    background:rgba(155,199,166,.08);
+}
+
+.fade{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+}
+
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
+}
