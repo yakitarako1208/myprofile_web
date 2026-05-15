@@ -1,46 +1,92 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio Archive</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archive</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="noise"></div>
+    <header>
+        <div class="logo">Ryusei Hamasaka</div>
+        <nav>
+            <a href="#">About</a>
+            <a href="#">Works</a>
+            <a href="#">Archive</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
 
-<header>
-    <div class="logo">ARCHIVE</div>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#works">Works</a>
-        <a href="#archive">Blog</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
+    <main>
 
-<section class="hero">
-    <h1>RYUSEI HAMASAKA</h1>
-    <p>Information Design / UX / Creative Coding</p>
-</section>
+        <section id="about" class="about-section">
+            <h2>About</h2>
 
-<section id="about" class="panel fade">
-    <h2>About</h2>
-</section>
+            <div class="about-wrap">
 
-<section id="works" class="panel fade">
-    <h2>Works</h2>
-</section>
+                <div class="profile-box">
+                    <img src="profile.jpg" alt="Profile">
+                </div>
 
-<section id="archive" class="panel fade">
-    <h2>Archive</h2>
-</section>
+                <div class="about-info">
+                    <p><strong>Name</strong><br>Ryusei Hamasaka</p>
 
-<section id="contact" class="panel fade">
-    <h2>Contact</h2>
-</section>
+                    <p><strong>University</strong><br>〇〇 University</p>
 
-<script src="script.js"></script>
+                    <p><strong>Major</strong><br>Information Design / UX</p>
+
+                    <p><strong>Tools</strong><br>
+                        Illustrator / Figma / Processing / Arduino</p>
+                </div>
+
+            </div>
+
+            <div class="about-text">
+                <p>
+                    食体験やインタラクションデザインを軸に、
+                    人の感性に触れる体験設計を研究しています。
+                </p>
+            </div>
+        </section>
+
+        <section class="home-section">
+            <h2>Works</h2>
+
+            <div class="card-grid two">
+                <div class="card"></div>
+                <div class="card"></div>
+            </div>
+
+            <a class="more">view more</a>
+        </section>
+
+        <section class="home-section">
+            <h2>Blog</h2>
+
+            <div class="card-grid three">
+                <div class="card small"></div>
+                <div class="card small"></div>
+                <div class="card small"></div>
+            </div>
+
+            <a class="more">read more</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Information Design / UX / Creative Coding</p>
+
+        <div class="sns">
+            <a>X</a>
+            <a>Instagram</a>
+            <a>Github</a>
+        </div>
+    </footer>
+
 </body>
+
 </html>
