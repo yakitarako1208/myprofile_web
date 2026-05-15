@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500&display=swap');
 
+/* =========================Base========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +15,13 @@ body {
     line-height: 1.8;
 }
 
+a {
+    text-decoration: none;
+    color: #375442;
+}
+
+/* =========================Header========================= */
+
 header {
     padding: 28px 80px;
     display: flex;
@@ -22,9 +31,9 @@ header {
 
 nav a {
     margin-left: 24px;
-    text-decoration: none;
-    color: #375442;
 }
+
+/* =========================Layout========================= */
 
 main {
     width: 86%;
@@ -32,15 +41,17 @@ main {
     margin: 60px auto;
 }
 
-.home-section {
-    margin-bottom: 90px;
+section {
+    margin: 180px 0;
 }
 
 h2 {
     font-size: 2.5rem;
-    margin-bottom: 24px;
+    margin-bottom: 60px;
     font-weight: 500;
 }
+
+/* =========================Cards========================= */
 
 .card-grid {
     display: grid;
@@ -68,49 +79,100 @@ h2 {
 
 .more {
     display: inline-block;
-    margin-top: 28px;
-    color: #375442;
+    margin-top: 50px;
     cursor: pointer;
 }
 
-footer {
-    padding: 80px;
-    border-top: 1px solid #8ca191;
-    display: flex;
-    justify-content: space-between;
+/* =========================Works Slider========================= */
+
+.works-slider {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 20px;
 }
 
-.sns a {
-    margin-left: 18px;
+.works-track {
+    display: flex;
+    gap: 28px;
+    width: max-content;
+    animation: scrollWorks 40s linear infinite;
 }
+
+.work-card {
+    width: 420px;
+    height: 300px;
+    flex-shrink: 0;
+    border: 1px solid #8ca191;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, .22);
+    transition: .4s;
+}
+
+.work-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, .35);
+}
+
+/* =========================Title========================= */
+
+.title-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-inner {
+    width: 86%;
+    max-width: 1400px;
+}
+
+.archive-label {
+    font-size: .9rem;
+    letter-spacing: .15em;
+    color: #55705d;
+    margin-bottom: 30px;
+}
+
+.title-page h1 {
+    font-size: 8rem;
+    line-height: 1;
+    font-weight: 500;
+    color: #18231b;
+    margin-bottom: 40px;
+}
+
+.title-desc {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #355041;
+}
+
+.scroll-mark {
+    margin-top: 80px;
+    font-size: .9rem;
+    color: #6e8475;
+}
+
+/* =========================About========================= */
 
 .about-section {
-    margin: 100px 0;
-    padding-top: 24px;
+    padding-top: 60px;
+    border-top: 1px solid #8ca191;
 }
 
 .about-wrap {
     display: grid;
-    grid-template-columns: 340px 1fr;
-    gap: 56px;
-    margin-top: 24px;
-}
-
-.about-text {
-    margin-top: 28px;
-    max-width: 760px;
-    font-size: 1rem;
-}
-
-.about-info p {
-    margin-bottom: 36px;
-    font-size: 1.05rem;
+    grid-template-columns: 420px 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-top: 40px;
 }
 
 .profile-box {
-    height: 420px;
+    height: 520px;
     border: 1px solid #8ca191;
-    border-radius: 20px;
+    border-radius: 24px;
     overflow: hidden;
     background: rgba(255, 255, 255, .18);
 }
@@ -121,4 +183,53 @@ footer {
     object-fit: cover;
     display: block;
     filter: grayscale(25%) contrast(.95) brightness(.96);
+}
+
+.about-info {
+    font-size: 1.35rem;
+    line-height: 1.45;
+}
+
+.about-info p {
+    margin-bottom: 36px;
+}
+
+.about-info strong {
+    display: block;
+    font-size: .95rem;
+    margin-bottom: 4px;
+    letter-spacing: .05em;
+    color: #355041;
+}
+
+.about-text {
+    margin-top: 40px;
+    max-width: 900px;
+    font-size: 1.2rem;
+    line-height: 2.1;
+}
+
+/* =========================Footer========================= */
+
+footer {
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #8ca191;
+}
+
+.sns a {
+    margin-left: 18px;
+}
+
+/* =========================Animation========================= */
+
+@keyframes scrollWorks {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
 }
