@@ -1,21 +1,32 @@
-const header = document.querySelector("header");
+history.scrollRestoration = "manual";
 
-let lastScrollY = window.scrollY;
+window.addEventListener("beforeunload", () => {
+    window.scrollTo(0, 0);
+});
+
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "instant"
+        });
+    }, 10);
+});
+
+
+const header = document.querySelector("header");
+let lastScrollY = 0;
 
 window.addEventListener("scroll", () => {
     const currentScrollY = window.scrollY;
 
-    // 一番上なら必ず表示
     if (currentScrollY <= 0) {
         header.classList.remove("hide");
     }
-
-    // 下スクロールで隠す
     else if (currentScrollY > lastScrollY) {
         header.classList.add("hide");
     }
-
-    // 上スクロールで表示
     else {
         header.classList.remove("hide");
     }

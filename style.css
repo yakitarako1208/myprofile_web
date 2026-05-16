@@ -20,6 +20,13 @@ a {
     color: #375442;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+section{
+    scroll-margin-top:140px;
+}
+
 /* =========================Header========================= */
 
 header {
