@@ -1,11 +1,24 @@
-const fades=document.querySelectorAll('.fade');
+const header = document.querySelector("header");
 
-const observer=new IntersectionObserver(entries=>{
-    entries.forEach(entry=>{
-        if(entry.isIntersecting){
-            entry.target.classList.add('show');
-        }
-    });
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+
+    // 一番上なら必ず表示
+    if (currentScrollY <= 0) {
+        header.classList.remove("hide");
+    }
+
+    // 下スクロールで隠す
+    else if (currentScrollY > lastScrollY) {
+        header.classList.add("hide");
+    }
+
+    // 上スクロールで表示
+    else {
+        header.classList.remove("hide");
+    }
+
+    lastScrollY = currentScrollY;
 });
-
-fades.forEach(f=>observer.observe(f));
